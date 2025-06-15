@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pawgress</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Login or Register</h2>
+    <input id="user-name" placeholder="Name"/>
+    <input id="user-pass" type="password" placeholder="Password"/>
+    <button id="btn-login">Login / Register</button>
+  </div>
+
+  <div id="pet-select-screen" class="hidden">
+    <h2>Choose your pet</h2>
+    <button class="choose-pet" data-pet="🐶">Dog 🐶</button>
+    <button class="choose-pet" data-pet="🐱">Cat 🐱</button>
+    <button class="choose-pet" data-pet="🐰">Rabbit 🐰</button>
+  </div>
+
+  <div id="app-screen" class="hidden">
+    <header><h1>Pawgress <span id="pet-icon">🐶</span></h1></header>
+
+    <div id="shop">
+      <h3>🎁 Shop</h3>
+      <button class="buy-item" data-item="Clothes">Clothes – 10 pts</button>
+      <button class="buy-item" data-item="Food">Food – 10 pts</button>
+      <button class="buy-item" data-item="Toy">Toy – 10 pts</button>
+      <button class="buy-item" data-item="Wallpaper">Wallpaper – 10 pts</button>
+    </div>
+
+    <form id="task-form">
+      <input id="task-input" placeholder="Task..." required/>
+      <button type="submit">Add ➕</button>
+    </form>
+
+    <div id="progress-container"><div id="progress-bar"><span></span></div></div>
+    <div id="task-list"></div>
+
+    <section id="pet-area">
+      <h2>Your Pet</h2>
+      <div id="pet-status">Mood:<span id="pet-mood"></span> | Hunger:<span id="pet-hunger"></span> | Energy:<span id="pet-energy"></span> | Pts:<span id="pet-points"></span></div>
+      <div id="house-items">Decor: none</div>
+    </section>
+
+    <div class="toast" id="toast">Yay 🎉</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

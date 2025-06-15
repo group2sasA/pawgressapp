@@ -1,0 +1,117 @@
+body, h2, h3 { margin:0; padding:0; font-family:Nunito,sans-serif }
+.hidden { display:none }
+#login-screen,#pet-select-screen,#app-screen {
+  text-align:center; padding:20px
+}
+button,input { margin:5px;padding:8px;border:none;border-radius:8px }
+#task-form { margin:10px }
+#task-input { width:200px }
+#task-list,.toast,#shop,#pet-area,#progress-container {
+  margin:10px auto; max-width:600px; background:#f9f9f9; padding:10px; border-radius:10px
+}
+.task-item { display:flex;justify-content:space-between;align-items:center;margin:5px 0;padding:8px;background:#e0e0e0;border-radius:8px }
+.task-item.done { text-decoration:line-through;opacity:0.6 }
+#progress-bar{background:#fff;height:15px;border-radius:10px;overflow:hidden}
+#progress-bar span{display:block;height:100%;width:0;background:#8ad4ff;transition:0.3s}
+.toast { position:fixed;bottom:20px;right:20px;background:#fff4c4;padding:10px;border-radius:10px; display:none }
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to right, #ffe1ec, #d4f0ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-direction: column;
+}
+
+#login-screen,
+#pet-select-screen,
+#app-screen {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#login-screen h2 {
+  font-size: 2em;
+  color: #ff4e8b;
+  margin-bottom: 20px;
+}
+
+#login-screen input {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#btn-login {
+  background-color: #ff4e8b;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-login:hover {
+  background-color: #e4437d;
+}
+
+/* Pet select */
+.choose-pet {
+  font-size: 1.2em;
+  background-color: #8ad4ff;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.choose-pet:hover {
+  background-color: #65c3f7;
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  #login-screen,
+  #pet-select-screen,
+  #app-screen {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  #login-screen h2 {
+    font-size: 1.5em;
+  }
+
+  #btn-login,
+  .choose-pet {
+    font-size: 0.9em;
+    padding: 10px 16px;
+  }
+}
+
+
